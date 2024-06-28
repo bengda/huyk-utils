@@ -1,0 +1,43 @@
+{
+  "name": "@huyk-utils/immutable-request",
+  "version": "1.0.0",
+  "description": "Immutable request canonical form, base on Zod",
+  "type": "module",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "unbuild": "unbuild",
+    "build": "run-s unbuild docs:extract docs:markdown",
+    "lint": "eslint . --fix",
+    "docs:extract": "api-extractor run --local --diagnostics",
+    "docs:markdown": "api-documenter markdown -i temp -o docs",
+    "docs:preview": "docsify serve docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@huyk-utils/atom-event": "workspace:^",
+    "@huyk-utils/utils": "workspace:^",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.25.4",
+    "@microsoft/api-extractor": "^7.47.0",
+    "npm-run-all2": "^6.2.0",
+    "typescript": "^5.5.2",
+    "unbuild": "^2.0.0"
+  }
+}

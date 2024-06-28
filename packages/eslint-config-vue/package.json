@@ -1,0 +1,17 @@
+{
+  "name": "@huyk-utils/eslint-config-vue",
+  "version": "1.0.0",
+  "description": "Shared vue, typescript eslint config",
+  "main": "index.cjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@stylistic/eslint-plugin": "^1.7.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0"
+  }
+}

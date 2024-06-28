@@ -1,0 +1,39 @@
+{
+  "name": "@huyk-utils/utils",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "unbuild": "unbuild",
+    "build": "run-s unbuild docs:extract docs:markdown",
+    "lint": "eslint . --fix",
+    "docs:extract": "api-extractor run --local --diagnostics",
+    "docs:markdown": "api-documenter markdown -i temp -o docs",
+    "docs:preview": "docsify serve docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.24.0",
+    "@microsoft/api-extractor": "^7.42.3",
+    "npm-run-all2": "^6.1.2",
+    "typescript": "^5.4.2",
+    "unbuild": "^2.0.0"
+  }
+}

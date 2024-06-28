@@ -1,0 +1,28 @@
+{
+  "name": "@huyk-utils/common",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "precommit": "nano-staged"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.2.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "nano-staged": {
+    "../**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": ["eslint --fix"],
+    "../**/*.{html,md}": "prettier --write"
+  }
+}

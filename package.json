@@ -1,0 +1,19 @@
+{
+  "name": "huyk-utils",
+  "version": "1.0.0",
+  "description": "Some usefull utils.",
+  "keywords": [],
+  "author": "huyk",
+  "license": "ISC",
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0",
+    "pnpm": ">=8.1"
+  },
+  "devDependencies": {
+    "@huyk-utils/eslint-config-vue": "workspace:^",
+    "husky": "^9.0.11"
+  },
+  "scripts": {
+    "prepare": "husky"
+  }
+}
